@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * di.xml
+ *
+ * @copyright Copyright © 2019 Dmitry Shkoliar. All rights reserved.
+ * @author    dmitry@shkoliar.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\DataObject">
+        <plugin name="shkoliar-debug-helper-data-object-plugin"
+                type="Shkoliar\DebugHelper\Plugin\Magento\Framework\DataObjectPlugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+    <type name="Magento\Framework\Model\AbstractModel">
+        <plugin name="shkoliar-debug-helper-abstract-model-plugin"
+                type="Shkoliar\DebugHelper\Plugin\Magento\Framework\Model\AbstractModelPlugin"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+</config>
